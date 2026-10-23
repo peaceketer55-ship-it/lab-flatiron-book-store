@@ -46,6 +46,23 @@ Flatbooks, a local bookstore, needs a website to start advertising their selecti
 4. **BONUS CHALLENGE: Delete Element**
    - Delete the element with id of `delete-this` from the DOM
 
+## Implementation and Maintenance
+
+The completed implementation in `index.js` updates the page heading from the
+`bookStore` data and creates a styled list item for each book, including its
+title, author, and cover image. It clears the starter example from `#book-list`
+before rendering the catalog.
+
+Run the automated checks with:
+
+```sh
+npm test
+```
+
+Use Git to review changes before saving them (`git status` and `git diff`).
+Re-run the tests after changes to the catalog rendering or page structure, and
+keep this README aligned with updates to the lab instructions or implementation.
+
 
 ## BONUS: Remove Elements from the DOM
 
