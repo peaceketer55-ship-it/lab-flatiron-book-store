@@ -64,3 +64,36 @@ bookStore.books.forEach((book) => {
     bookContainer.append(bookTitle, bookAuthor, bookImage);
     bookList.append(bookContainer);
 });
+
+function displayPosts(posts) {
+    const postList = document.getElementById("post-list");
+    postList.replaceChildren();
+
+    posts.forEach((post) => {
+        const postContainer = document.createElement("li");
+        const postTitle = document.createElement("h1");
+        const postBody = document.createElement("p");
+
+        postTitle.textContent = post.title;
+        postBody.textContent = post.body;
+
+        postContainer.append(postTitle, postBody);
+        postList.append(postContainer);
+    });
+}
+
+async function fetchPosts() {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        if (!response.ok) {
+            throw new Error(`Failed to fetch posts: ${response.status} ${response.statusText}`);
+        }
+
+        const posts = await response.json();
+        displayPosts(posts);
+    } catch (error) {
+        console.error("Unable to load posts.", error);
+    }
+}
+
+fetchPosts();

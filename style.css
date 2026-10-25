@@ -16,3 +16,20 @@
 .list-li img{
     width:190px;
 }
+
+.posts ul{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 0;
+}
+
+.posts li{
+    list-style: none;
+    padding: 16px;
+    box-shadow: 4px 5px #c9c8c8;
+}
+
+.posts h1{
+    font-size: 1.25rem;
+}
