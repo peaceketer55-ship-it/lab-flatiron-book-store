@@ -43,7 +43,7 @@ const bookStore = {
     ]
 }
 
-// Write your code here!
+
 const bookStoreTitle = document.getElementById("header");
 bookStoreTitle.textContent = bookStore.name;
 
